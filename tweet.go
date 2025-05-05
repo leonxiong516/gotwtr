@@ -36,11 +36,13 @@ const (
 	TweetFieldWithHeld           TweetField = "withheld"
 	TweetFieldGeo                TweetField = "geo"
 	TweetFieldMaxResults         TweetField = "max_results"
+	TweetFieldNoteTweet          TweetField = "note_tweet"
 )
 
 type Tweet struct {
 	ID                 string                    `json:"id"`
 	Text               string                    `json:"text"`
+	NoteTweet          interface{}               `json:"note_tweet"`
 	EditHistoryIDs     []string                  `json:"edit_history_tweet_ids"`
 	Attachments        *TweetAttachment          `json:"attachments,omitempty"`
 	AuthorID           string                    `json:"author_id,omitempty"`
